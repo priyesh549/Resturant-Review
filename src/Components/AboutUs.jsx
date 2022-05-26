@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
+import jwt_decode from "jwt-decode";
 
 function AboutUs() {
   const [User, setUser] = useState({});
   useEffect(() => {
     const fetch = async () => {
       let du = JSON.parse(localStorage.getItem("User"));
-      setUser(du);
+      setUser(jwt_decode(du.token));
     };
     fetch();
   }, []);

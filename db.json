@@ -7,11 +7,24 @@
       "id": 1,
       "Ratings": [
         {
-          "User": "User1",
-          "time": "2022-05-25 10:58:00",
-          "Comments": "I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose. To do so, I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure",
+          "User": "User2",
+          "time": "2022-05-24 11:32:21",
+          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
           "Rate": 4,
-          "Unique": "e203fafa-76de-4ef8-ae91-95c87703284c"
+          "Unique": "a40a3878-f5d6-4612-919a-a086b212adf08"
+        },
+        {
+          "User": "User3",
+          "time": "2022-05-24 11:32:54",
+          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
+          "Rate": 3,
+          "Unique": "a40a3878-f5d6-4612-919a-a086b212adf88"
+        },
+        {
+          "User": "Regular2",
+          "time": "2022-05-26 13:33:44",
+          "Rate": 2,
+          "Unique": "c6a1fed0-629a-407a-a8a1-adba6648d786"
         }
       ]
     },
@@ -20,7 +33,15 @@
       "Location": "Pratap Nagar,Delhi",
       "AvgRating": 3,
       "id": 2,
-      "Ratings": []
+      "Ratings": [
+        {
+          "User": "User5",
+          "time": "2022-05-24 11:48:14",
+          "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
+          "Rate": 2,
+          "Unique": "ede9833d-4669-4a3e-844b-18e36cb68f4"
+        }
+      ]
     },
     {
       "Name": "Hudson Cafe",
@@ -91,8 +112,17 @@
     {
       "Name": "Munchies ",
       "Location": "London",
-      "AvgRating": 3,
-      "id": 6
+      "AvgRating": 4,
+      "id": 6,
+      "Ratings": [
+        {
+          "User": "User5",
+          "time": "2022-05-24 11:48:14",
+          "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
+          "Rate": 2,
+          "Unique": "ede9833d-4669-4a3e-844b-18e36cb68f4a"
+        }
+      ]
     },
     {
       "Name": "Kitchen Sensation ",
@@ -100,6 +130,13 @@
       "AvgRating": 1,
       "id": 7,
       "Ratings": [
+        {
+          "User": "User5",
+          "time": "2022-05-24 11:48:23",
+          "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
+          "Rate": 3,
+          "Unique": "c9814c5e-e7c2-4de3-9e3d-89859e0e0651"
+        },
         {
           "User": "User3",
           "time": "2022-05-24 11:37:17",
@@ -113,45 +150,27 @@
           "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
           "Rate": 3,
           "Unique": "c9814c5e-e7c2-4de3-9e3d-89859e0e0651"
+        },
+        {
+          "time": "2022-05-26 13:18:41",
+          "Comments": "HI i am jjj",
+          "Rate": 5,
+          "Unique": "adada090-ab7e-4398-b1f1-815d1adb3889"
         }
       ]
     },
     {
       "Name": "Feast Palace",
       "Location": "Bali",
-      "AvgRating": 4,
-      "id": 8,
-      "Ratings": [
-        {
-          "User": "User3",
-          "time": "2022-05-24 11:37:56",
-          "Comments": "Sed porttitor nibh quis enim mollis, sit amet semper massa scelerisque. Quisque dictum libero suscipit, vestibulum nunc a, molestie arcu. Mauris lobortis sem magna, id euismod nulla tempor at. Donec sed dui placerat, pretium dolor vestibulum, ultrices odio. Nulla et auctor nibh. Nunc consequat scelerisque orci a ultricies. Praesent pharetra orci ut lacus efficitur, a vehicula ante euismod. Sed ultricies quis sem ac maximus",
-          "Rate": 2,
-          "Unique": "84bbb343-c332-4ead-a708-291d99dd9459"
-        },
-        {
-          "User": "User1",
-          "time": "2022-05-25 10:57:02",
-          "Comments": "I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose. To do so, I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure",
-          "Rate": 1,
-          "Unique": "9e035632-d352-4c59-81d7-9fd6b89e5447"
-        }
-      ]
+      "AvgRating": 5,
+      "id": 8
     },
     {
       "Name": "Grub Chef",
       "Location": "Spain",
       "AvgRating": 4,
       "id": 9,
-      "Ratings": [
-        {
-          "User": "User4",
-          "time": "2022-05-24 11:44:58",
-          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
-          "Rate": 4,
-          "Unique": "3d268d9e-0e58-4a67-845c-128a529a8adb"
-        }
-      ]
+      "Ratings": []
     },
     {
       "Name": "Menu Feed",
@@ -242,6 +261,13 @@
       "id": 15,
       "Ratings": [
         {
+          "User": "User5",
+          "time": "2022-05-24 11:49:15",
+          "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
+          "Rate": 2,
+          "Unique": "ec2128ce-f8c4-4a07-9b66-cad102844946"
+        },
+        {
           "User": "User4",
           "time": "2022-05-24 11:46:11",
           "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
@@ -254,6 +280,12 @@
           "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
           "Rate": 2,
           "Unique": "ec2128ce-f8c4-4a07-9b66-cad102844946"
+        },
+        {
+          "time": "2022-05-26 12:10:49",
+          "Comments": "Updated by user1",
+          "Rate": 2,
+          "Unique": "1666f044-ed4b-4ffd-9518-a4eed929e5ef"
         }
       ]
     },
@@ -362,6 +394,28 @@
       ]
     },
     {
+      "Name": "Green Sweets",
+      "Location": "NandGram",
+      "AvgRating": 2,
+      "id": 22,
+      "Ratings": [
+        {
+          "User": "User2",
+          "time": "2022-05-24 11:31:05",
+          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
+          "Rate": 2,
+          "Unique": "b19f00ff-7c20-4066-b782-3c4dbc3da013"
+        },
+        {
+          "User": "User4",
+          "time": "2022-05-24 11:44:09",
+          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
+          "Rate": 3,
+          "Unique": "79f4c0e7-3a90-4c13-be4c-3f4569c14cac"
+        }
+      ]
+    },
+    {
       "Name": "JFC",
       "Location": "Raj Nagar Extension",
       "AvgRating": 1,
@@ -404,6 +458,35 @@
           "Unique": "fbb2a8be-3535-438b-a0d4-4911a8334c82"
         }
       ]
+    },
+    {
+      "Name": "abc ",
+      "Location": "xyz",
+      "AvgRating": 2,
+      "Ratings": [
+        {
+          "User": "User2",
+          "time": "2022-05-24 11:32:51",
+          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
+          "Rate": 1,
+          "Unique": "9fed46bc-341d-4f62-963d-4a6953991d5d"
+        },
+        {
+          "User": "User3",
+          "time": "2022-05-24 11:38:13",
+          "Comments": "Sed porttitor nibh quis enim mollis, sit amet semper massa scelerisque. Quisque dictum libero suscipit, vestibulum nunc a, molestie arcu. Mauris lobortis sem magna, id euismod nulla tempor at. Donec sed dui placerat, pretium dolor vestibulum, ultrices odio. Nulla et auctor nibh. Nunc consequat scelerisque orci a ultricies. Praesent pharetra orci ut lacus efficitur, a vehicula ante euismod. Sed ultricies quis sem ac maximus",
+          "Rate": 5,
+          "Unique": "fbb2a8be-3535-438b-a0d4-4911a8334c82"
+        }
+      ],
+      "id": 25
+    },
+    {
+      "Name": "Admin added you",
+      "Location": "admin house",
+      "AvgRating": 5,
+      "Ratings": [],
+      "id": 27
     }
   ],
   "Users": [
@@ -443,11 +526,39 @@
       "id": 5
     },
     {
-      "Email": "ii@ii.com",
-      "Password": "1111111111",
-      "Name": "ii",
+      "Name": "User5",
+      "Email": "User5@gmail.com",
       "Role": "User",
+      "Password": "12345",
       "id": 6
+    },
+    {
+      "Name": "Regular User",
+      "Email": "Regular@gmail.com",
+      "Role": "User",
+      "Password": "12345",
+      "id": 8
+    },
+    {
+      "Name": "Admin",
+      "Email": "Admin@gmail.com",
+      "Role": "Admin",
+      "Password": "12345",
+      "id": 9
+    },
+    {
+      "Name": "Regular1",
+      "Email": "Regular1@gmail.com",
+      "Role": "Admin",
+      "Password": "12345",
+      "id": 10
+    },
+    {
+      "Name": "Regular2",
+      "Email": "Regular2@gmail.com",
+      "Role": "User",
+      "Password": "12345",
+      "id": 11
     }
   ]
 }

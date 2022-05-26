@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import jwt_decode from "jwt-decode";
 
 function NavBar() {
   const handleUser = () => {
@@ -9,7 +10,7 @@ function NavBar() {
   const [CurrentUser, setCurrentUser] = useState({});
   useEffect(() => {
     const getUser = JSON.parse(localStorage.getItem("User"));
-    setCurrentUser(getUser);
+    setCurrentUser(jwt_decode(getUser.token));
   }, []);
 
   return (

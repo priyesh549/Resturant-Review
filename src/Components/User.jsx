@@ -3,6 +3,8 @@ import axios from "axios";
 import { Card, Button } from "react-bootstrap";
 import NavBar from "./NavBar";
 import { MdEmail } from 'react-icons/md';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function User() {
   const [users, setUsers] = useState([]);
@@ -22,20 +24,21 @@ function User() {
     setUserList(userList + 1);
   }
 
-  const DeleteData = async(id) => {
+  const DeleteData = async(user) => {
     await axios
-      .delete(`http://localhost:3000/Users/${id}`)
+      .delete(`http://localhost:3000/Users/${user.id}`)
       .then((resp) => {
-        console.log(resp.data);
+        return toast(`${user.Name.toUpperCase()} deleted`)
       })
       .catch((error) => {
-        console.log(error);
+        return toast(`${user.Name.toUpperCase()} error deleting`)
       });
   };
 
 
   return (
     <>
+      <ToastContainer/>
       <NavBar />
       <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
       {users.map((user) => {
@@ -62,7 +65,7 @@ function User() {
                 eum dolore iusto quasi necessitatibus animi ab eius?
               </Card.Text>
               <div>
-                <Button variant="outline-danger" onClick={()=>handleDelete(user.id)}>Delete</Button>
+                <Button variant="outline-danger" onClick={()=>handleDelete(user)}>Delete</Button>
               </div>
             </Card>
           )

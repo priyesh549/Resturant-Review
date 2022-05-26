@@ -1,6 +1,6 @@
 import './App.css';
 import Login from './Components/Login';
-import SignUp from './Components/SignUp';
+import Register from './Components/Register';
 import Resturant from './Components/Resturant';
 import NavBar from './Components/NavBar';
 import { Routes,Route } from 'react-router-dom';
@@ -11,17 +11,11 @@ import AboutUs from './Components/AboutUs';
 import User from './Components/User';
 
 function App() {
-  const [userdetails,setuserdetails] = useState();
-  useEffect(()=>{
-    const fetchDetails = async() =>{
-      const du = localStorage.getItem("User");
-      setuserdetails(du);
-    }
-  })
+  
   return (
     <div className="App">
         <Routes>
-          <Route path='/SignUp' element={<SignUp/>}/>
+          <Route path='/register' element={<Register/>}/>
           <Route path='/'  element={<Login/>}/>
           <Route path='/Resturant' element={<Resturant/>}/>
           <Route path='/UserComments/:id' element={<MoreDetails />}/>

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import { MdLocationPin } from "react-icons/md";
 import NavBar from "./NavBar";
+import jwt_decode from "jwt-decode";
 
 function MoreDetails() {
   const params = useParams();
@@ -24,19 +25,42 @@ function MoreDetails() {
         `http://localhost:3000/Resturants/${id}`
       );
       RatingDetails = RatingDetails.data;
-      setReview(RatingDetails.Ratings);
+      let max = 0;
+      let min = 6;
+      let maxRating;
+      let minRating;
+
+      for (let i = 0; i < RatingDetails.Ratings.length; i++) {
+        if (RatingDetails.Ratings[i].Rate > max) {
+          maxRating = RatingDetails.Ratings[i];
+          max = RatingDetails.Ratings[i].Rate;
+        }
+
+        if (RatingDetails.Ratings[i].Rate < min) {
+          minRating = RatingDetails.Ratings[i];
+          min = RatingDetails.Ratings[i].Rate;
+        }
+      }
+
+      let latestRatings =
+        RatingDetails.Ratings[RatingDetails.Ratings.length - 1];
+
+      if (RatingDetails.Ratings.length > 0) {
+        setReview([maxRating, minRating, latestRatings]);
+      }
       setResturantDetails(RatingDetails);
-      const du = JSON.parse(localStorage.getItem("User"));
-      setUser(du);
+      const getUser = JSON.parse(localStorage.getItem("User"));
+      setUser(jwt_decode(getUser.token));
+      console.log(jwt_decode(getUser.token));
     };
     fetchRatings();
-  },[List]);
+  }, [List]);
+  // console.log(ResturantReview)
 
   return (
     <div>
       <NavBar />
-      {
-        User.Role !== 'Admin' &&
+      {User.Role !== "Admin" && (
         <Button
           variant="warning"
           onClick={() => setaddReview(true)}
@@ -44,7 +68,7 @@ function MoreDetails() {
         >
           ADD REVIEWS
         </Button>
-      }
+      )}
       {addReview === true && (
         <AddReview
           setaddReview={setaddReview}
@@ -94,6 +118,7 @@ function MoreDetails() {
       >
         {ResturantReview &&
           ResturantReview.map((rating) => {
+            // console.log('rating',rating);
             return (
               <MoreDetailsComments
                 ratings={ResturantReview}
@@ -101,7 +126,6 @@ function MoreDetails() {
                 time={rating.time}
                 Comments={rating.Comments}
                 Rate={rating.Rate}
-                Unique={rating.Unique}
                 id={id}
                 Name={User.Name}
                 Role={User.Role}

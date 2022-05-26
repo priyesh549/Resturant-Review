@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import axios from "axios";
 import { Form, Col, Row, Button, Container} from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AddHotel({ setaddHotel, setChangeList, ListChange }) {
   const [name, setName] = useState();
@@ -17,24 +19,25 @@ function AddHotel({ setaddHotel, setChangeList, ListChange }) {
         AvgRating: currRating,
         Ratings : []
       })
-      // .then((resp) => {
-      //   console.log(resp.data);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
+      .then((resp) => {
+        toast("Added Successfully",{alert : 'success'})
+      })
+      .catch((error) => {
+        toast("Error adding",{alert : 'failure'})
+      });
   };
 
   const SubmitDetails = async () => {
     if (!name || !location || currRating === 0) {
-      alert("Invalid data");
-      return;
+      return toast('Invalid Data',{alert : 'error'});
     }
     await savedetails();
     setaddHotel(false);
     setChangeList(ListChange + 1);
   };
   return (
+    <>
+    <ToastContainer/>
     <Container style={{border:'1px solid grey',marginTop:'40px',padding:'10px'}}>
       <Form.Group as={Row} className="mb-3">
         <Form.Label column sm={2}>
@@ -80,6 +83,7 @@ function AddHotel({ setaddHotel, setChangeList, ListChange }) {
         </Col>
       </Form.Group>
     </Container>
+    </>
     // <div className="AddHotel">
     //   <label>Resturant Name</label>
     //   <input

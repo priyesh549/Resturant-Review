@@ -2,11 +2,10 @@ import { FaStar } from "react-icons/fa";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {
-  Card,
-  Button,
-} from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { MdLocationPin } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ResturantDetail({
   Name,
@@ -24,29 +23,27 @@ function ResturantDetail({
   const [location, setLocation] = useState(Location);
 
   const saveData = async () => {
-    await axios
-      .put(`http://localhost:3000/Resturants/${id}`, {
-        Name: name,
-        Location: location,
-        AvgRating: currRating,
-      })
-      // .then((resp) => {
-      //   console.log(resp.data);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
+    await axios.put(`http://localhost:3000/Resturants/${id}`, {
+      Name: name,
+      Location: location,
+      AvgRating: currRating,
+    })
+    .then((resp) => {
+      return toast('successfully Edited',{alert : 'success'})
+    })
+    .catch((error) => {
+      return toast('Failed to Edit',{alert : 'faliure'})
+    });
   };
 
   const DeleteData = async () => {
-    await axios
-      .delete(`http://localhost:3000/Resturants/${id}`)
-      // .then((resp) => {
-      //   console.log(resp.data);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
+    await axios.delete(`http://localhost:3000/Resturants/${id}`)
+    .then((resp) => {
+      return toast('successfully deleted',{alert : 'success'})
+    })
+    .catch((error) => {
+      return toast('Failed to Delete',{alert : 'faliure'})
+    });
   };
 
   const handleSave = async () => {
@@ -61,6 +58,7 @@ function ResturantDetail({
   };
   return (
     <>
+      <ToastContainer />
       <div className="">
         {edit === false ? (
           <React.Fragment>
@@ -197,7 +195,7 @@ function ResturantDetail({
               placeholder="Enter resturant location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              style={{margin:'1rem'}}
+              style={{ margin: "1rem" }}
             />
             {[1, 2, 3, 4, 5].map((ele) => {
               return (
@@ -211,8 +209,16 @@ function ResturantDetail({
                 />
               );
             })}
-            <Button variant="outline-success" onClick={handleSave} style={{margin:'1rem'}}>Save</Button>
-            <Button variant="outline-danger" onClick={() => setEdit(false)}>Cancel</Button>
+            <Button
+              variant="outline-success"
+              onClick={handleSave}
+              style={{ margin: "1rem" }}
+            >
+              Save
+            </Button>
+            <Button variant="outline-danger" onClick={() => setEdit(false)}>
+              Cancel
+            </Button>
           </>
         )}
       </div>

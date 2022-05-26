@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import axios from "axios";
 import { Card, Button } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function MoreDetailsComments({
   ratings,
@@ -14,61 +16,42 @@ function MoreDetailsComments({
   Name,
   Role,
   List,
-  setListChange
+  setListChange,
 }) {
   const [edit, setEdit] = useState(false);
   const [hover, setHover] = useState(Rate);
   const [currRating, setCurrRating] = useState(Rate);
   const [reviewComment, setReviewComment] = useState();
 
-  const getFormatedDate = () => {
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    let mm = today.getMonth() + 1; // Months start at 0!
-    let dd = today.getDate();
-    let hh = today.getHours();
-    let min = today.getMinutes();
-    let ss = today.getSeconds();
-
-    if (dd < 10) dd = "0" + dd;
-    if (mm < 10) mm = "0" + mm;
-    if (hh < 10) hh = "0" + hh;
-    if (min < 10) min = "0" + min;
-    if (ss < 10) ss = "0" + ss;
-
-    console.log(yyyy + "-" + mm + "-" + dd + " " + hh + ":" + min + ":" + ss);
-
-    return yyyy + "-" + mm + "-" + dd + " " + hh + ":" + min + ":" + ss;
-  };
-
   const handleSubmit = async () => {
     setEdit(false);
-    if (!reviewComment || !currRating) {
-      alert("Invalid Review");
-      return;
+    if (!reviewComment && !currRating) {
+      return toast("Invalid Review",{alert : 'error'});
     }
     const newRating = ratings.map((rating) => {
       if (rating.User === User) {
         rating.Comments = reviewComment;
-        rating.time = getFormatedDate();
         rating.Rate = currRating;
       }
       return rating;
     });
     await SaveAgain(newRating);
-    setListChange(List+1);
+    setListChange(List + 1);
   };
 
   const handleDelete = async () => {
+    // console.log('old',ratings)
     const newRating = ratings.filter((rating) => {
-      if (rating.Unique !== Unique) {
+      // console.log(rating.User,User)
+      if (rating.User !== User ) {
+        // console.log('Entered here')
         return true;
       }
       return false;
     });
-    console.log(newRating);
     await Delete(newRating);
-    setListChange(List+1);
+    // console.log('new',newRating);
+    setListChange(List + 1);
   };
 
   const Delete = async (newRating) => {
@@ -77,10 +60,10 @@ function MoreDetailsComments({
         Ratings: [...newRating],
       })
       .then((resp) => {
-        console.log(resp.data);
+        return toast('Deleted Successfully',{alert : 'success'});
       })
       .catch((error) => {
-        console.log(error);
+        return toast('Failed Deleting',{alert : 'failure'});
       });
   };
 
@@ -90,14 +73,15 @@ function MoreDetailsComments({
         Ratings: [...newRating],
       })
       .then((resp) => {
-        console.log(resp.data);
+        return toast('Edited Successfully',{alert : 'success'});
       })
       .catch((error) => {
-        console.log(error);
+        return toast('Failed editing',{alert : 'failure'});
       });
   };
   return (
     <>
+      <ToastContainer />
       {edit === false ? (
         <Card
           style={{

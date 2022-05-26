@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Form, Col, Row, Button } from "react-bootstrap";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function SignUp() {
+function Register() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [role, setRole] = useState("User");
   const [isvalidemail, setValidity] = useState(false);
   const navigate = useNavigate();
 
@@ -25,38 +26,62 @@ function SignUp() {
       );
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(name, email, password, role);
-    if (!name || !email || !password || !role) {
-      return alert("Fill all the details!");
+    if (!name || !email || !password) {
+      return toast("Fill all the details!", { alert: "error" });
     }
 
     if (!isvalidemail) {
-      return alert("Enter valid email Id");
+      return toast("Enter valid email Id", { alert: "error" });
     }
 
 
-    await axios
-      .post("http://localhost:3000/Users", {
-        Email: email,
-        Password: password,
+    // axios
+    //   .post("http://localhost:5000/api/auth/login", {
+    //     Email: email,
+    //     Password: password,
+    //   })
+    //   .then((response) => {
+    //     console.log("response", response);
+    //     localStorage.setItem(
+    //       "User",
+    //       JSON.stringify({
+    //         userLogin: true,
+    //         token: response.data.access_token,
+    //       })
+    //     );
+    //     setEmail("");
+    //     setPassword("");
+    //     navigate('/Resturant')
+    //   })
+    //   .catch((error) => {
+    //     return toast("Incorrect email or password");
+    //   });
+
+    axios
+      .post("http://localhost:5000/api/auth/register", {
         Name : name,
-        Role : role
+        Email : email,
+        Role : "User",
+        Password : password
       })
       .then((resp) => {
-        console.log(resp.token)
-        localStorage.setItem('User',JSON.stringify(resp.data))
-        console.log(resp.data);
+        localStorage.setItem("User",JSON.stringify({userLogin: true,token: resp.data.access_token,}));
+        toast("successfully sign Up");
+        setTimeout(() => {
+          navigate("/Resturant");
+        }, 3000);
       })
       .catch((error) => {
         console.log(error);
+        toast("error siginingUp");
       });
-      navigate('/Resturant')
   };
 
   return (
     <>
+      <ToastContainer />
       <Form style={{ marginTop: "30px", textAlign: "center" }}>
         <Form.Group
           as={Row}
@@ -101,27 +126,15 @@ function SignUp() {
             />
           </Col>
         </Form.Group>
-        <Form.Label column sm={3}>
-          <Col sm={4}>
-            <Form.Select
-              aria-label="Default select User Type"
-              className="mb-5"
-              onChange={(e) => setRole(e.target.value)}
-            >
-              <option value="User" selected>
-                User
-              </option>
-              <option value="Admin">Admin</option>
-            </Form.Select>
-          </Col>
-        </Form.Label>
+
         <Form.Group as={Row} className="mb-3">
           <Col sm={{ span: 6, offset: 2 }}>
             <Button type="submit" onClick={(e) => handleSubmit(e)}>
               Register
             </Button>
-            <p>Already have an account?{'  '}
-            <Link to='/'>Login</Link>
+            <p>
+              Already have an account?{"  "}
+              <Link to="/">Login</Link>
             </p>
           </Col>
         </Form.Group>
@@ -130,4 +143,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Register;
