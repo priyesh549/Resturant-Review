@@ -14,6 +14,7 @@ function MoreDetails() {
   const params = useParams();
   const id = params.id;
   const [ResturantReview, setReview] = useState([]);
+  const [ALLReviews,setALLReviews] = useState([]);
   const [ResturantDetail, setResturantDetails] = useState({});
   const [addReview, setaddReview] = useState(false);
   const [List, setListChange] = useState(0);
@@ -47,8 +48,10 @@ function MoreDetails() {
 
       if (RatingDetails.Ratings.length > 0) {
         setReview([maxRating, minRating, latestRatings]);
+        setALLReviews(RatingDetails.Ratings)
       }
       setResturantDetails(RatingDetails);
+
       const getUser = JSON.parse(localStorage.getItem("User"));
       setUser(jwt_decode(getUser.token));
       console.log(jwt_decode(getUser.token));
@@ -75,8 +78,8 @@ function MoreDetails() {
           setListChange={setListChange}
           List={List}
           id={id}
-          RatingDetails={ResturantReview}
-          setReviews={setReview}
+          RatingDetails={ALLReviews}
+          setReviews={setALLReviews}
         />
       )}
 
@@ -121,7 +124,7 @@ function MoreDetails() {
             // console.log('rating',rating);
             return (
               <MoreDetailsComments
-                ratings={ResturantReview}
+                ratings={ALLReviews}
                 User={rating.User}
                 time={rating.time}
                 Comments={rating.Comments}

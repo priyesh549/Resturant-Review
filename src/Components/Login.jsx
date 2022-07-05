@@ -59,7 +59,7 @@ function Login() {
     // alert('Invalid email or password')
 
     axios
-      .post("http://localhost:5000/api/auth/login", {
+      .post("https://priyesh549.github.io/jsonapi/db.json/api/auth/login", {
         Email: email,
         Password: password,
       })
@@ -80,7 +80,7 @@ function Login() {
         },3000)
       })
       .catch((error) => {
-        return toast("Incorrect email or password");
+        return toast("Invalid email or password");
       });
   };
 

@@ -60,23 +60,23 @@ function Register() {
     //   });
 
     axios
-      .post("http://localhost:5000/api/auth/register", {
+      .post("https://priyesh549.github.io/jsonapi/db.json", {
         Name : name,
         Email : email,
         Role : "User",
         Password : password
       })
-      .then((resp) => {
-        localStorage.setItem("User",JSON.stringify({userLogin: true,token: resp.data.access_token,}));
-        toast("successfully sign Up");
-        setTimeout(() => {
-          navigate("/Resturant");
-        }, 3000);
-      })
-      .catch((error) => {
-        console.log(error);
-        toast("error siginingUp");
-      });
+      // .then((resp) => {
+      //   localStorage.setItem("User",JSON.stringify({userLogin: true,token: resp.data.access_token,}));
+      //   toast("successfully Registered");
+      //   setTimeout(() => {
+      //     navigate("/Resturant");
+      //   }, 3000);
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      //   toast("error siginingUp");
+      // });
   };
 
   return (

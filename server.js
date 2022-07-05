@@ -3,7 +3,13 @@ const bodyParser = require("body-parser");
 const jsonServer = require("json-server");
 const jwt = require("jsonwebtoken");
 
+
+
 const server = jsonServer.create();
+
+const cors = require('cors');
+server.use(cors());
+
 const db = JSON.parse(fs.readFileSync("./db.json", "utf-8"));
 
 server.use(bodyParser.urlencoded({ extended: true }));
@@ -22,7 +28,7 @@ function isAuthenticated({ Email, Password }){
   return (
     db.Users.findIndex(
       (user) => user.Email === Email && user.Password === Password
-    ? false : true)
+    ? false : false)
   );
 }
 
@@ -86,14 +92,17 @@ server.post("/api/auth/login", (req, res) => {
   let Role = '';
   let id = '';
   for(let i=0;i<db.Users.length;i++){
-      if(db.Users[i].Email === Email && db.Users[i].Password){
+      if(db.Users[i].Email === Email && db.Users[i].Password === Password){
+        console.log(Email,Password,"is correct");
           Name = db.Users[i].Name
           Role = db.Users[i].Role
           id = db.Users[i].id
       }
   }
-  const access_token = createToken({ Name,Email,Role,Password,id });
-  res.status(200).json({ access_token });
+  setTimeout(()=>{
+    const access_token = createToken({ Name,Email,Role,Password,id });
+    res.status(200).json({ access_token });
+  },2000)
 });
 
 

@@ -89,11 +89,12 @@ function Resturant() {
                 type="text"
                 placeholder="Enter Ratings"
                 onChange={(e) => {
+                  
                   if (
                     parseInt(e.target.value) <= 0 ||
-                    parseInt(e.target.value) > 5
+                    parseInt(e.target.value) > 5 || ( isNaN(parseInt(e.target.value)) && e.key !== 'Backspace')
                   ) {
-                    alert("Invalid entry");
+                    toast("Invalid Rating",{alert : 'error'});
                     e.target.value = "";
                     return;
                   }

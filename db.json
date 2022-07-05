@@ -25,45 +25,39 @@
           "time": "2022-05-26 13:33:44",
           "Rate": 2,
           "Unique": "c6a1fed0-629a-407a-a8a1-adba6648d786"
+        },
+        {
+          "User": "Regular3",
+          "time": "2022-05-26 21:33:44",
+          "Rate": 1,
+          "Unique": "c6a1fed0-629a-407a-a8a1-adba6648d32"
+        },
+        {
+          "User": "Regular4",
+          "time": "2014-05-26 13:33:44",
+          "Rate": 3,
+          "Unique": "c6a1fed0-629a-407a-a8a1-adba6648d7"
+        },
+        {
+          "User": "Regular6",
+          "time": "2022-04-26 13:33:44",
+          "Rate": 4,
+          "Unique": "c6a1fed0-629a-407a-a8a1-adba6648d76"
         }
       ]
     },
     {
       "Name": "Momo Cafe",
       "Location": "Pratap Nagar,Delhi",
-      "AvgRating": 3,
+      "AvgRating": 5,
       "id": 2,
-      "Ratings": [
-        {
-          "User": "User5",
-          "time": "2022-05-24 11:48:14",
-          "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
-          "Rate": 2,
-          "Unique": "ede9833d-4669-4a3e-844b-18e36cb68f4"
-        }
-      ]
+      "Ratings": []
     },
     {
       "Name": "Hudson Cafe",
       "Location": "Hudson Lane,Delhi",
       "AvgRating": 5,
-      "id": 3,
-      "Ratings": [
-        {
-          "User": "User1",
-          "time": "2022-05-24 11:27:56",
-          "Comments": "Quisque eget quam nunc. Donec id laoreet odio. Integer in consequat diam, non accumsan nulla. Praesent euismod lorem sed tortor cursus, id vestibulum felis suscipit. Curabitur finibus placerat enim quis lacinia. Suspendisse sagittis dapibus lectus, vel maximus ipsum tincidunt in.",
-          "Rate": 3,
-          "Unique": "fa5883e2-61af-4f40-93b6-a6e2e6ad89a6"
-        },
-        {
-          "User": "User2",
-          "time": "2022-05-24 11:32:21",
-          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
-          "Rate": 4,
-          "Unique": "a40a3878-f5d6-4612-919a-a086b212adf8"
-        }
-      ]
+      "id": 3
     },
     {
       "Name": "Bistro Bazaar",
@@ -131,11 +125,11 @@
       "id": 7,
       "Ratings": [
         {
-          "User": "User5",
-          "time": "2022-05-24 11:48:23",
-          "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
-          "Rate": 3,
-          "Unique": "c9814c5e-e7c2-4de3-9e3d-89859e0e0651"
+          "User": "naman",
+          "time": "2022-05-26 13:18:41",
+          "Comments": "HI i am jjj",
+          "Rate": 5,
+          "Unique": "adada090-ab7e-4398-b1f1-815d1adb3889"
         },
         {
           "User": "User3",
@@ -145,25 +139,27 @@
           "Unique": "2e2af962-9d78-41a3-829f-92b98c44486b"
         },
         {
-          "User": "User5",
-          "time": "2022-05-24 11:48:23",
-          "Comments": "то текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами",
-          "Rate": 3,
-          "Unique": "c9814c5e-e7c2-4de3-9e3d-89859e0e0651"
-        },
-        {
-          "time": "2022-05-26 13:18:41",
-          "Comments": "HI i am jjj",
-          "Rate": 5,
-          "Unique": "adada090-ab7e-4398-b1f1-815d1adb3889"
+          "User": "aman",
+          "time": "2022-05-26 18:12:36",
+          "Rate": 4,
+          "Unique": "11f9fd97-1ae7-46bb-9beb-07f97dda0fae"
         }
       ]
     },
     {
       "Name": "Feast Palace",
       "Location": "Bali",
-      "AvgRating": 5,
-      "id": 8
+      "AvgRating": 3,
+      "id": 8,
+      "Ratings": [
+        {
+          "User": "aman",
+          "time": "2022-05-26 18:09:48",
+          "Comments": "Hi I am updating this",
+          "Rate": 3,
+          "Unique": "bc35e3d6-2554-4a99-bae7-0ec154fcd4c7"
+        }
+      ]
     },
     {
       "Name": "Grub Chef",
@@ -460,105 +456,34 @@
       ]
     },
     {
-      "Name": "abc ",
-      "Location": "xyz",
-      "AvgRating": 2,
-      "Ratings": [
-        {
-          "User": "User2",
-          "time": "2022-05-24 11:32:51",
-          "Comments": "Donec varius purus non orci imperdiet varius. Phasellus lorem nulla, cursus nec consectetur eget, placerat euismod enim. Suspendisse quis massa interdum, iaculis nisl fringilla, malesuada urna. Curabitur vel erat suscipit, sagittis eros ac, vehicula sem. Quisque luctus at nunc at auctor.",
-          "Rate": 1,
-          "Unique": "9fed46bc-341d-4f62-963d-4a6953991d5d"
-        },
-        {
-          "User": "User3",
-          "time": "2022-05-24 11:38:13",
-          "Comments": "Sed porttitor nibh quis enim mollis, sit amet semper massa scelerisque. Quisque dictum libero suscipit, vestibulum nunc a, molestie arcu. Mauris lobortis sem magna, id euismod nulla tempor at. Donec sed dui placerat, pretium dolor vestibulum, ultrices odio. Nulla et auctor nibh. Nunc consequat scelerisque orci a ultricies. Praesent pharetra orci ut lacus efficitur, a vehicula ante euismod. Sed ultricies quis sem ac maximus",
-          "Rate": 5,
-          "Unique": "fbb2a8be-3535-438b-a0d4-4911a8334c82"
-        }
-      ],
-      "id": 25
-    },
-    {
       "Name": "Admin added you",
       "Location": "admin house",
       "AvgRating": 5,
       "Ratings": [],
       "id": 27
+    },
+    {
+      "Name": "Burger Singh",
+      "Location": "RDC",
+      "AvgRating": 4,
+      "Ratings": [],
+      "id": 28
     }
   ],
   "Users": [
     {
-      "Name": "Priyesh231",
+      "Name": "Priyesh",
       "Email": "priyesh1545@gmail.com",
       "Role": "Admin",
       "Password": "12345",
       "id": 1
     },
     {
-      "Name": "User1",
-      "Email": "User1@gmail.com",
+      "Name": "aman",
+      "Email": "aman@fam.com",
       "Role": "User",
       "Password": "12345",
       "id": 2
-    },
-    {
-      "Name": "User2",
-      "Email": "User2@gmail.com",
-      "Role": "User",
-      "Password": "12345",
-      "id": 3
-    },
-    {
-      "Name": "User3",
-      "Email": "User3@gmail.com",
-      "Role": "User",
-      "Password": "12345",
-      "id": 4
-    },
-    {
-      "Name": "User4",
-      "Email": "User4@gmail.com",
-      "Role": "User",
-      "Password": "12345",
-      "id": 5
-    },
-    {
-      "Name": "User5",
-      "Email": "User5@gmail.com",
-      "Role": "User",
-      "Password": "12345",
-      "id": 6
-    },
-    {
-      "Name": "Regular User",
-      "Email": "Regular@gmail.com",
-      "Role": "User",
-      "Password": "12345",
-      "id": 8
-    },
-    {
-      "Name": "Admin",
-      "Email": "Admin@gmail.com",
-      "Role": "Admin",
-      "Password": "12345",
-      "id": 9
-    },
-    {
-      "Name": "Regular1",
-      "Email": "Regular1@gmail.com",
-      "Role": "Admin",
-      "Password": "12345",
-      "id": 10
-    },
-    {
-      "Name": "Regular2",
-      "Email": "Regular2@gmail.com",
-      "Role": "User",
-      "Password": "12345",
-      "id": 11
     }
   ]
 }
