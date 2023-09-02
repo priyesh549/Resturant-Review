@@ -27,21 +27,22 @@ function createToken(payload) {
 function isAuthenticated({ Email, Password }){
   return (
     db.Users.findIndex(
-      (user) => user.Email === Email && user.Password === Password
-    ? false : false)
+      (user) => (user.Email === Email && user.Password === Password)
+    ? true : false)
   );
 }
 
 // Logic for register
 server.post("/api/auth/register", (req, res) => {
   const { Name, Email, Role, Password } = req.body;
-  console.log('here we are',Name,Email,Role,Password)
-  if (isAuthenticated({ Email, Password })) {
-    const status = 401;
-    const message = "Email & Password already exist";
-    res.status(status).json({ status, message });
-    return;
-  }
+  console.log('here we are',Name,Email,Role,Password);
+  // if (isAuthenticated({ Email, Password })) {
+  //   console.log("done before");
+  //   const status = 401;
+  //   const message = "Email & Password already exist";
+  //   res.status(status).json({ status, message });
+  //   return;
+  // }
 
   fs.readFile("./db.json", (err, data) => {
     if (err) {
@@ -81,7 +82,10 @@ server.post("/api/auth/register", (req, res) => {
 // Logic for login
 server.post("/api/auth/login", (req, res) => {
   const { Email, Password } = req.body;
-  if (!isAuthenticated({ Email, Password })) {
+  console.log(req);
+  console.log(isAuthenticated({ Email, Password }))
+  if (isAuthenticated({ Email, Password }) === -1) {
+    console.log("Not authenticated");
     const status = 401;
     const message = "Incorrect email or Password";
     res.status(status).json({ status, message });
@@ -99,6 +103,7 @@ server.post("/api/auth/login", (req, res) => {
           id = db.Users[i].id
       }
   }
+
   setTimeout(()=>{
     const access_token = createToken({ Name,Email,Role,Password,id });
     res.status(200).json({ access_token });

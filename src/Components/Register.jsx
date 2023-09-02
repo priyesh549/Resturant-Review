@@ -59,24 +59,26 @@ function Register() {
     //     return toast("Incorrect email or password");
     //   });
 
+    console.log(name,email,password)
+    
     axios
-      .post("https://priyesh549.github.io/jsonapi/db.json", {
+      .post("http://localhost:5000/api/auth/register", {
         Name : name,
         Email : email,
         Role : "User",
         Password : password
       })
-      // .then((resp) => {
-      //   localStorage.setItem("User",JSON.stringify({userLogin: true,token: resp.data.access_token,}));
-      //   toast("successfully Registered");
-      //   setTimeout(() => {
-      //     navigate("/Resturant");
-      //   }, 3000);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      //   toast("error siginingUp");
-      // });
+      .then((resp) => {
+        localStorage.setItem("User",JSON.stringify({userLogin: true,token: resp.data.access_token,}));
+        toast("successfully Registered");
+        setTimeout(() => {
+          navigate("/Resturant");
+        }, 3000);
+      })
+      .catch((error) => {
+        console.log(error);
+        toast("error siginingUp");
+      });
   };
 
   return (

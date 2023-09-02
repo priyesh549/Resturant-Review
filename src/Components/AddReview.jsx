@@ -58,7 +58,7 @@ function AddReview({ setaddReview, id, RatingDetails, setListChange, List }) {
       return true;
     });
     await axios
-      .patch(`http://localhost:3000/Resturants/${id}`, {
+      .patch(`http://localhost:8000/Resturants/${id}`, {
         Ratings: [...comments, obj],
       })
       .then((resp) => {

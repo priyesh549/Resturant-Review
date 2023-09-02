@@ -17,7 +17,7 @@ function NavBar() {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/Resturant">Resturant Clicks</Navbar.Brand>
+          <Navbar.Brand href="/Resturant">Tap For Review</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/Resturant">Home</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>

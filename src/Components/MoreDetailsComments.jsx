@@ -56,7 +56,7 @@ function MoreDetailsComments({
 
   const Delete = async (newRating) => {
     await axios
-      .patch(`http://localhost:3000/Resturants/${id}`, {
+      .patch(`http://localhost:8000/Resturants/${id}`, {
         Ratings: [...newRating],
       })
       .then((resp) => {
@@ -69,7 +69,7 @@ function MoreDetailsComments({
 
   const SaveAgain = async (newRating) => {
     await axios
-      .patch(`http://localhost:3000/Resturants/${id}`, {
+      .patch(`http://localhost:8000/Resturants/${id}`, {
         Ratings: [...newRating],
       })
       .then((resp) => {

@@ -30,7 +30,7 @@ function Resturant() {
 
   useEffect(() => {
     const data = async () => {
-      let resturant = await axios.get("http://localhost:3000/Resturants");
+      let resturant = await axios.get("http://localhost:8000/Resturants");
       resturant = await resturant.data;
       setList(resturant);
       setPage(Math.ceil(resturant.length / 8));

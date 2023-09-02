@@ -12,7 +12,7 @@ function User() {
 
   useEffect(() => {
     const fetchUsers = async() => {
-      let userdata = await axios.get("http://localhost:3000/Users");
+      let userdata = await axios.get("http://localhost:8000/Users");
       userdata = userdata.data;
       setUsers(userdata);
     };
@@ -26,7 +26,7 @@ function User() {
 
   const DeleteData = async(user) => {
     await axios
-      .delete(`http://localhost:3000/Users/${user.id}`)
+      .delete(`http://localhost:8000/Users/${user.id}`)
       .then((resp) => {
         return toast(`${user.Name.toUpperCase()} deleted`)
       })

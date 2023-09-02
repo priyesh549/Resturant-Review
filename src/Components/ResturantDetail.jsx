@@ -23,7 +23,7 @@ function ResturantDetail({
   const [location, setLocation] = useState(Location);
 
   const saveData = async () => {
-    await axios.put(`http://localhost:3000/Resturants/${id}`, {
+    await axios.put(`http://localhost:8000/Resturants/${id}`, {
       Name: name,
       Location: location,
       AvgRating: currRating,
@@ -37,7 +37,7 @@ function ResturantDetail({
   };
 
   const DeleteData = async () => {
-    await axios.delete(`http://localhost:3000/Resturants/${id}`)
+    await axios.delete(`http://localhost:8000/Resturants/${id}`)
     .then((resp) => {
       return toast('successfully deleted',{alert : 'success'})
     })

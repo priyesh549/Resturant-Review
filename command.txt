@@ -1,0 +1,3 @@
+npm start
+node server.js 
+json-server --watch db.json --port 8000

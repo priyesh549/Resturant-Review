@@ -13,7 +13,7 @@ function AddHotel({ setaddHotel, setChangeList, ListChange }) {
 
   const savedetails = async () => {
     await axios
-      .post(`http://localhost:3000/Resturants`, {
+      .post(`http://localhost:8000/Resturants`, {
         Name: name,
         Location: location,
         AvgRating: currRating,

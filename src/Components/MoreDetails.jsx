@@ -23,7 +23,7 @@ function MoreDetails() {
   useEffect(() => {
     const fetchRatings = async () => {
       let RatingDetails = await axios.get(
-        `http://localhost:3000/Resturants/${id}`
+        `http://localhost:8000/Resturants/${id}`
       );
       RatingDetails = RatingDetails.data;
       let max = 0;

@@ -15,7 +15,7 @@ function Login() {
 
   useEffect(() => {
     const fetch = async () => {
-      let dataUser = await axios("http://localhost:3000/Users");
+      let dataUser = await axios("http://localhost:8000/Users");
       dataUser = dataUser.data;
       setUserdata(dataUser);
     };
@@ -50,16 +50,14 @@ function Login() {
     //   if(userData[i].Email === email && userData[i].Password === password){
     //     localStorage.setItem('User',JSON.stringify(userData[i]));
     //     toast('Successfully Login')
-    //     setTimeout(()=>{
-    //       navigate('/Resturant')
-    //     },3000)
+        
     //     return
     //   }
     // }
     // alert('Invalid email or password')
 
     axios
-      .post("https://priyesh549.github.io/jsonapi/db.json/api/auth/login", {
+      .post("http://localhost:5000/api/auth/login", {
         Email: email,
         Password: password,
       })
